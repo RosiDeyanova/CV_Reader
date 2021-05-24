@@ -1,0 +1,8 @@
+<FirstName>Petar</FirstName>
+<LastName>Nikolaev</LastName>
+<Age>25</Age>
+<Education>MG K.Velichkov</Education>
+<Education>Sofia University</Education>
+<Work>Melon</Work>
+<Work>WM Ware</Work>
+<Date>18.03</Date>
