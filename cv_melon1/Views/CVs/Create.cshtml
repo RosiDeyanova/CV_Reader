@@ -1,0 +1,89 @@
+﻿@model cv_melon1.Models.CV
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br/><br/>
+<div class="text-center">
+    <h1 class="display-4">CV Uploader</h1>
+    <p>Upload your XML format CV</p>
+    
+    <form method="post" enctype="multipart/form-data"
+          asp-controller="Cvs" asp-action="Create">
+
+        <label for="file">Upload file:</label>
+        <input type="file" name="file">
+        <input type="submit" value="Upload CV" />
+
+    </form> ​
+
+    @*@using (Html.BeginForm("Create",
+       "CVs",
+       FormMethod.Post,
+       new { enctype = "multipart/form-data" }))
+    {
+        <label for="file">Upload file:</label>
+        <input type="file" name="cv" /><br><br>
+        <input type="submit" value="Upload CV" />
+        <br><br>
+        @ViewBag.Message
+    }*@
+
+</div>
+
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="fisrtName" class="control-label"></label>
+                <input asp-for="fisrtName" class="form-control" />
+                <span asp-validation-for="fisrtName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lastName" class="control-label"></label>
+                <input asp-for="lastName" class="form-control" />
+                <span asp-validation-for="lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fileName" class="control-label"></label>
+                <input asp-for="fileName" class="form-control" />
+                <span asp-validation-for="fileName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="workingPlaces" class="control-label"></label>
+                <input asp-for="workingPlaces" class="form-control" />
+                <span asp-validation-for="workingPlaces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="workingPlaces" class="control-label"></label>
+                <input asp-for="workingPlaces" class="form-control" />
+                <span asp-validation-for="workingPlaces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="studyinPlaces" class="control-label"></label>
+                <input asp-for="studyinPlaces" class="form-control" />
+                <span asp-validation-for="studyinPlaces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="studyinPlaces" class="control-label"></label>
+                <input asp-for="studyinPlaces" class="form-control" />
+                <span asp-validation-for="studyinPlaces" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

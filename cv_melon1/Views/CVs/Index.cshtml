@@ -1,0 +1,52 @@
+﻿@model List<IndexDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                FirstName
+            </th>
+            <th>
+               LastName
+            </th>
+            <th>
+                Studying places
+            </th>
+            <th>
+                Working places
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fisrtName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.workingPlaces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.studyinPlaces)
+            </td>
+            <td>
+                
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
