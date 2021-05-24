@@ -1,0 +1,8 @@
+<FirstName>petar</FirstName>
+<LastName>nikolaev</LastName>
+<Age>25</Age>
+<Education>kp</Education>
+<Education>zdr</Education>
+<Work>dve</Work>
+<Work>edno</Work>
+<Date>18.03</Date>
